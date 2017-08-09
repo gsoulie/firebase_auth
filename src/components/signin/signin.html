@@ -1,0 +1,16 @@
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="onSignin(f)">
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Mail</ion-label>
+                <ion-input type="email" ngModel name="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>password</ion-label>
+                <ion-input type="password" ngModel name="password" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button type="submit" class="submitButton" [disabled]="!f.valid">Se connecter</button>
+        <button ion-button clear type="button" (click)="onSignup(f)" class="submitButton" [disabled]="!f.valid">Créer un compte</button>
+    </form>  
+</ion-content>
